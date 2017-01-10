@@ -1,6 +1,25 @@
 # Website Performance Optimization
 Optimized an online portfolio for speed--in particular--optimized the critical rendering path and made this page render as quickly as possible by applying the techniques from the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
+####Installing packages
+
+To install packages required for this project use the following:
+
+  ```bash
+  npm install grunt
+  npm install
+  ```
+
+Install [ImageMagick](https://www.imagemagick.org/script/binary-releases.php) with the corresponding download
+
+Once these items have been installed, you can run the following to build the project:
+
+  ```bash
+  grunt default
+  ```
+
+Your files will be located in the newly generated dist folder.
+
 ####Objective 1: Optimize PageSpeed Insights score for index.html
 
 This score can be determined after first creating a simple Python server:

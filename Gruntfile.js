@@ -18,8 +18,8 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'dist/index.html': 'index.html',
-                    'dist/views/pizza.html': 'views/pizza.html'
+                    'dist/index.html': 'src/index.html',
+                    'dist/views/pizza.html': 'src/views/pizza.html'
                 }
             }
         },
@@ -27,13 +27,13 @@ module.exports = function(grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd: 'css/',
+                    cwd: 'src/css/',
                     src: ['*.css', '!*.min.css'],
                     dest: 'dist/css/',
                     ext: '.min.css'
                 }, {
                     expand: true,
-                    cwd: 'views/css/',
+                    cwd: 'src/views/css/',
                     src: ['*.css', '!*.min.css'],
                     dest: 'dist/views/css/',
                     ext: '.min.css'
@@ -53,13 +53,13 @@ module.exports = function(grunt) {
             my_target: {
                 files: [{
                     expand: true,
-                    cwd: 'js/',
+                    cwd: 'src/js/',
                     src: '*.js',
                     dest: 'dist/js/',
                     ext: '.min.js'
                 }, {
                     expand: true,
-                    cwd: 'views/js/',
+                    cwd: 'src/views/js/',
                     src: '*.js',
                     dest: 'dist/views/js/',
                     ext: '.min.js'
@@ -88,12 +88,12 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     src: ['*.{gif,jpg,png,jpeg}'],
-                    cwd: 'img/',
+                    cwd: 'src/img/',
                     dest: 'dist/img/'
                 }, {
                     expand: true,
                     src: ['*.{gif,jpg,png,jpeg}'],
-                    cwd: 'views/images',
+                    cwd: 'src/views/images',
                     dest: 'dist/views/images/'
                 }]
             }
@@ -114,7 +114,7 @@ module.exports = function(grunt) {
         mkdir: {
             dev: {
                 options: {
-                    create: ['dist/img', 'dist/css', 'views/dist/css', 'dist/js', 'views/dist/js']
+                    create: ['dist/img', 'dist/css', 'dist/js']
                 }
             }
         },
@@ -127,7 +127,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'dist/',
-                    src: ['index.html', 'js/analytics.min.js'],
+                    src: ['src/index.html', 'src/js/analytics.min.js'],
                     dest: '/'
                 }]
             }
@@ -137,17 +137,17 @@ module.exports = function(grunt) {
         copy: {
             dev: {
                 files: [{
-                    cwd: 'img/',
+                    cwd: 'src/img/',
                     src: '*.{gif,jpg,png}',
                     dest: 'dist/img/',
                     expand: true
                 }, {
-                    cwd: 'views/images/',
+                    cwd: 'src/views/images/',
                     src: '*.{gif,jpg,png}',
                     dest: 'dist/views/images/',
                     expand: true
                 }, {
-                    cwd: 'views/dist/',
+                    cwd: 'src/views/dist/',
                     src: ['js/*.*', 'css/*.*', '*.html'],
                     dest: 'dist/views/',
                     expand: true
