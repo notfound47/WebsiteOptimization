@@ -19,6 +19,9 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'dist/index.html': 'src/index.html',
+                    'dist/project-2048.html': 'src/project-2048.html',
+                    'dist/project-mobile.html': 'src/project-mobile.html',
+                    'dist/project-webperf.html': 'src/project-webperf.html',
                     'dist/views/pizza.html': 'src/views/pizza.html'
                 }
             }
