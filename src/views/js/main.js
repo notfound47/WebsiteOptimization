@@ -525,7 +525,7 @@ function updatePositions() {
 
   // Optimized code that takes less effort to go through the phases
   // and calculate the scrollTopLookup variable
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < 3; i++) {
     phaseArray.push(Math.sin((scrollTopLookup / 1250) + i));
   }
 
@@ -553,7 +553,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 100; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
