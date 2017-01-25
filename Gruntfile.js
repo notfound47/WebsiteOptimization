@@ -79,7 +79,7 @@ module.exports = function(grunt) {
                         quality: 50
                     },
                     {
-                        width: 800,
+                        width: 100,
                         quality: 50
                     }]
                 },
@@ -174,20 +174,33 @@ module.exports = function(grunt) {
         },
 
         replace:   {
-            my_target:   {
-                src:   ['dist/index.html', 'dist/views/pizza.html'],
+            pizza_page:   {
+                src:   ['dist/views/pizza.html'],
                 overwrite:  true,
                  
                 replacements:   [{
                     from:  '.js',
-                     
                     to:  '.min.js'
                 }, {
                     from:  '.css',
                     to:  '.min.css'
                 }, {
                     from:  '.jpg',
-                    to:  '-800.jpg'
+                    to:  '-400.jpg'
+                }]
+            },
+            main_page: {
+                src: ['dist/index.html'],
+                overwrite: true,
+                replacements:   [{
+                    from:  '.js',
+                    to:  '.min.js'
+                }, {
+                    from:  '.css',
+                    to:  '.min.css'
+                }, {
+                    from:  '.jpg',
+                    to:  '-100.jpg'
                 }]
             }
         }
